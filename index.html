@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Oleg Nafta</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="images/logo1.png" alt="OlegNafta">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html" class="link">Головна</a></li>
+                <li><a href="t&c.html" class="link">Умови користувача</a></li>
+                <li><a href="help.html" class="link">Допомога</a></li>
+                <li><a href="about.html" class="link">Про нас</a></li>
+            </ul>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+<!----------------------------- Form box ----------------------------------->    
+<div class="form-box">
+        
+    <!------------------- buy gasoline -------------------------->
+  
+    <div class="buy-container" id="buygas">
+        <div class="top">
+            <span> <a href="#" onclick="gasprices(),gasprice()"><h3>Подивитись ціни</h3></a></span>
+            <header>Купити бензин</header>
+        </div>
+        <div class="walletConBox">  
+          <button type="button" class="web3connect" id="connectWeb3" onclick="connectWallet()">Підключити Web3</button><h4 class="walletConText" id="Walletconnect">Гаманець не підключений</h4>
+        </div>
+        <div class="walletConBox">  
+            <button type="button" class="web3connect" id="checkdisc" onclick="checkdisc()">Дізнатись дисконт</button><h4 class="walletConText" id="amountdisc">0</h4>
+          </div>
+        <div class="input-box">
+            <input type="text" class="input-field" placeholder="Вид бензину" id="gastype">
+            <i class="bx bx-gas-pump"></i>
+        </div>
+        <div class="input-box">
+            <input type="number" class="input-field" placeholder="Кількість" id="gasamount">
+            <i class='bx bx-right-arrow-alt'></i>
+        </div>
+        <div class="input-box">
+            <button type="submit" class="submitbuy" onclick="Buygas()">Здійснити покупку</button>
+        </div>
+        
+    </div>
+  
+    <!------------------- Gasoline prices -------------------------->
+    <div class="price-container" id="gasprice">
+        <div class="top">
+            <span><a href="#" onclick="buygas()"><h3>Повернутись до покупки</h3></a></span>
+            <header>Ціни бензину</header>
+        </div>
+          <div class="gasprices">
+            <div class="gptext">
+                <h4 >A-100: </h4><h4 class="gpt" id="GP1">0</h4> <h4 class="gpt">ether</h4>
+            </div>
+            <div class="gptext">
+                <h4 >A-98: </h4><h4 class="gpt1" id="GP2">0</h4> <h4 class="gpt">ether</h4>
+                </div>
+            <div class="gptext">
+                <h4 >A-95: </h4><h4 class="gpt1" id="GP3">0</h4> <h4 class="gpt">ether</h4>
+                </div>
+            <div class="gptext">
+                <h4 >A-92: </h4><h4 class="gpt1" id="GP4">0</h4> <h4 class="gpt">ether</h4>
+            </div>
+          </div>
+    </div>
+  </div>
+  </div> 
+      
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.14.0/web3.min.js" integrity="sha512-T7OzbURlIun+wXZKgNYW6Zvj3v643pmDCMZ29qhgZHuFOAKppBajSGybddoDUcKrMaAx+BAoe+rWF0nnwv/cCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/buygas.js"></script>
+  <script src="js/Web3.js"></script>
+  </html>
